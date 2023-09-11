@@ -1,5 +1,15 @@
 <template>
-  <div>Some text</div>
+	<div class="container">
+		<header class="header">
+			<h1 class="title">Border Radius Generator</h1>
+		</header>
+		<main>
+			<section>
+
+			</section>
+		</main>
+	</div>
+  
 </template>
 
 <script setup>
@@ -29,6 +39,9 @@
 	font-weight: 800;
 	font-style: normal;
 	font-display: swap;
+}
+.header {
+	padding-top: 2rem;
 }
 </style>
 
