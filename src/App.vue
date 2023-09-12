@@ -4,15 +4,15 @@
 			<h1 class="title">Border Radius Generator</h1>
 		</header>
 		<main>
-			<section>
-
-			</section>
+			<BorderGenerator />
 		</main>
 	</div>
   
 </template>
 
 <script setup>
+import BorderGenerator from './components/BorderGenerator.vue';
+
 	
 </script>
 
@@ -41,7 +41,7 @@
 	font-display: swap;
 }
 .header {
-	padding-top: 2rem;
+	padding: 2.5rem 0;
 }
 </style>
 
