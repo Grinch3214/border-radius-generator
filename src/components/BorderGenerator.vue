@@ -1,16 +1,16 @@
 <template>
   <section class="generator">
     <div class="generator__show"></div>
-    <input type="range" class="generator__handler" v-model="sliderValue">
-		<p>{{ sliderValue }}</p>
+    <input type="range" class="generator__handler slider-top" v-model="sliderTopValue">
+		<input type="range" class="generator__handler slider-bottom" v-model="sliderBottomValue">
   </section>
 </template>
 
 <script setup>
 import { ref } from 'vue';
 
-const isDragging = ref(false)
-const sliderValue = ref(50)
+const sliderTopValue = ref(50)
+const sliderBottomValue = ref(50)
 
 </script>
 
@@ -37,15 +37,16 @@ const sliderValue = ref(50)
   &__handler {
     position: absolute;
 		width: 100%;
-    top: 0;
-    left: 0;
-    // width: 1.8rem;
-    // height: 1.8rem;
-    // border-radius: 50%;
-    // background: #000;
-    // border: 3px solid white;
-    // cursor: pointer;
-    // transition: left 0.2s;
+		&.slider-top {
+			top: -10px;
+			left: 0;
+		}
+
+		&.slider-bottom {
+			top: auto;
+    	left: 0;
+			bottom: 10px;
+		}
   }
 }
 </style>
