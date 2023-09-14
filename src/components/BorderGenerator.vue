@@ -3,6 +3,8 @@
     <div class="generator__show"></div>
     <input type="range" class="generator__handler slider-top" v-model="sliderTopValue">
 		<input type="range" class="generator__handler slider-bottom" v-model="sliderBottomValue">
+		<input type="range" class="generator__handler slider-left">
+		<input type="range" class="generator__handler slider-right">
   </section>
 </template>
 
@@ -37,15 +39,29 @@ const sliderBottomValue = ref(50)
   &__handler {
     position: absolute;
 		width: 100%;
+
 		&.slider-top {
 			top: -10px;
 			left: 0;
 		}
 
 		&.slider-bottom {
-			top: auto;
-    	left: 0;
-			bottom: 10px;
+			left: 0;
+			bottom: 8px;
+		}
+
+		&.slider-left {
+			top: 0;
+    	left: 7px;
+			transform: rotate(90deg);
+			transform-origin: 0 0 0;
+		}
+
+		&.slider-right {
+			bottom: 0;
+			right: -10px;
+			transform: rotate(90deg);
+			transform-origin: 100% 0 0;
 		}
   }
 }
