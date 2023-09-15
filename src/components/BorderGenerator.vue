@@ -1,18 +1,26 @@
 <template>
   <section class="generator">
-    <div class="generator__show"></div>
+    <div class="generator__show" :style="stylesHandle"></div>
     <input type="range" class="generator__handler slider-top" v-model="sliderTopValue">
 		<input type="range" class="generator__handler slider-bottom" v-model="sliderBottomValue">
-		<input type="range" class="generator__handler slider-left">
-		<input type="range" class="generator__handler slider-right">
+		<input type="range" class="generator__handler slider-left" v-model="sliderLeftValue">
+		<input type="range" class="generator__handler slider-right" v-model="sliderRightValue">
   </section>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 
 const sliderTopValue = ref(50)
 const sliderBottomValue = ref(50)
+const sliderLeftValue = ref(38)
+const sliderRightValue = ref(67)
+
+const stylesHandle = computed(() => {
+	return `
+		top:${sliderTopValue.value}%;bottom:${sliderBottomValue.value}%;left:${sliderLeftValue.value};right: ${sliderRightValue.value};
+	`
+})
 
 </script>
 
