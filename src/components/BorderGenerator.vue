@@ -11,14 +11,30 @@
 <script setup>
 import { ref, computed } from 'vue';
 
-const sliderTopValue = ref(50)
-const sliderBottomValue = ref(50)
-const sliderLeftValue = ref(38)
-const sliderRightValue = ref(67)
+const sliderTopValue = ref(14)
+const sliderBottomValue = ref(18)
+const sliderLeftValue = ref(14)
+const sliderRightValue = ref(42)
+
+const calculateValue = (slideValue) => {
+	if(slideValue >= 0 && slideValue <= 100) {
+		const result = 100 - slideValue
+		return result
+	}
+}
+
 
 const stylesHandle = computed(() => {
 	return `
-		top:${sliderTopValue.value}%;bottom:${sliderBottomValue.value}%;left:${sliderLeftValue.value};right: ${sliderRightValue.value};
+		border-radius:
+		${sliderTopValue.value}%
+		${calculateValue(sliderTopValue.value)}%
+		${calculateValue(sliderBottomValue.value)}%
+		${sliderBottomValue.value}% /
+		${sliderLeftValue.value}%
+		${sliderRightValue.value}%
+		${calculateValue(sliderRightValue.value)}%
+		${calculateValue(sliderLeftValue.value)}%
 	`
 })
 
