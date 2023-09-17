@@ -62,6 +62,8 @@ async function copyResult() {
 			background: rgb(165, 156, 156);
 			border-radius: 8px 0 0 8px;
 			color: #111;
+			max-width: 580px;
+			width: 100%;
 
 			span {
 				text-transform: uppercase;
