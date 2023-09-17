@@ -5,20 +5,22 @@
 		</header>
 		<main>
 			<BorderGenerator :ranges="ranges" />
+			<InputResult :ranges="ranges" />
 		</main>
 	</div>
   
 </template>
 
 <script setup>
-import BorderGenerator from './components/BorderGenerator.vue'
 import { ref } from 'vue'
+import BorderGenerator from './components/BorderGenerator.vue'
+import InputResult from './components/InputResult.vue'
 
 const ranges = ref({
-	sliderTopValue: 14,
-	sliderBottomValue: 18,
-	sliderLeftValue: 14,
-	sliderRightValue: 42
+	sliderTopValue: 35,
+	sliderBottomValue: 20,
+	sliderLeftValue: 50,
+	sliderRightValue: 40
 })
 </script>
 
