@@ -1,20 +1,21 @@
 <template>
   <section class="generator">
     <div class="generator__show" :style="stylesHandle"></div>
-    <input type="range" class="generator__handler slider-top" v-model="sliderTopValue">
-		<input type="range" class="generator__handler slider-bottom" v-model="sliderBottomValue">
-		<input type="range" class="generator__handler slider-left" v-model="sliderLeftValue">
-		<input type="range" class="generator__handler slider-right" v-model="sliderRightValue">
+    <input type="range" class="generator__handler slider-top" v-model="ranges.sliderTopValue">
+		<input type="range" class="generator__handler slider-bottom" v-model="ranges.sliderBottomValue">
+		<input type="range" class="generator__handler slider-left" v-model="ranges.sliderLeftValue">
+		<input type="range" class="generator__handler slider-right" v-model="ranges.sliderRightValue">
   </section>
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
+import { computed } from 'vue'
 
-const sliderTopValue = ref(14)
-const sliderBottomValue = ref(18)
-const sliderLeftValue = ref(14)
-const sliderRightValue = ref(42)
+const props = defineProps({
+	ranges: {
+		type: Object
+	}
+})
 
 const calculateValue = (slideValue) => {
 	if(slideValue >= 0 && slideValue <= 100) {
@@ -23,18 +24,17 @@ const calculateValue = (slideValue) => {
 	}
 }
 
-
 const stylesHandle = computed(() => {
 	return `
 		border-radius:
-		${sliderTopValue.value}%
-		${calculateValue(sliderTopValue.value)}%
-		${calculateValue(sliderBottomValue.value)}%
-		${sliderBottomValue.value}% /
-		${sliderLeftValue.value}%
-		${sliderRightValue.value}%
-		${calculateValue(sliderRightValue.value)}%
-		${calculateValue(sliderLeftValue.value)}%
+		${props.ranges.sliderTopValue}%
+		${calculateValue(props.ranges.sliderTopValue)}%
+		${calculateValue(props.ranges.sliderBottomValue)}%
+		${props.ranges.sliderBottomValue}% /
+		${props.ranges.sliderLeftValue}%
+		${props.ranges.sliderRightValue}%
+		${calculateValue(props.ranges.sliderRightValue)}%
+		${calculateValue(props.ranges.sliderLeftValue)}%
 	`
 })
 

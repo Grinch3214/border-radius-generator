@@ -25,75 +25,90 @@ input[type=range] {
 	background: transparent;
 }
 input[type=range]:focus {
-outline: none;
+	outline: none;
 }
 input[type=range]::-webkit-slider-runnable-track {
-height: 0px;
-box-shadow: none;
-background: transparent;
-border-radius: 0px;
-border: none;
+	height: 0px;
+	box-shadow: none;
+	background: transparent;
+	border-radius: 0px;
+	border: none;
 }
 input[type=range]::-webkit-slider-thumb {
-box-shadow: none;
-border: 4px solid white;
-height: 1.8rem;
-width: 1.8rem;
-border-radius: 50%;
-background: black;
-cursor: pointer;
--webkit-appearance: none;
+	box-shadow: none;
+	border: 4px solid white;
+	height: 1.8rem;
+	width: 1.8rem;
+	border-radius: 50%;
+	background: black;
+	cursor: pointer;
+	-webkit-appearance: none;
+	transition: all .2s ease;
+	&:hover {
+		transform: scale(1.3);
+		border-color: $red-color;
+	}
 }
 
 input[type=range]::-moz-range-track {
-height: 0;
-cursor: pointer;
-box-shadow: none;
-background: transparent;
-border-radius: 0px;
-border: none;
+	height: 0;
+	cursor: pointer;
+	box-shadow: none;
+	background: transparent;
+	border-radius: 0px;
+	border: none;
 }
 input[type=range]::-moz-range-thumb {
-box-shadow: none;
-border: 4px solid white;
-height: 1.8rem;
-width: 1.8rem;
-border-radius: 50%;
-background: black;
-cursor: pointer;
+	box-shadow: none;
+	border: 4px solid white;
+	height: 1.8rem;
+	width: 1.8rem;
+	border-radius: 50%;
+	background: black;
+	cursor: pointer;
+	transition: all .2s ease;
+	&:hover {
+		transform: scale(1.3);
+		border-color: $red-color;
+	}
 }
 input[type=range]::-ms-track {
-height: 0;
-background: transparent;
-border-color: transparent;
-color: transparent;
+	height: 0;
+	background: transparent;
+	border-color: transparent;
+	color: transparent;
 }
 input[type=range]::-ms-fill-lower {
-background: transparent;
-border: none;
-border-radius: 0px;
-box-shadow: none;
+	background: transparent;
+	border: none;
+	border-radius: 0px;
+	box-shadow: none;
 }
 input[type=range]::-ms-fill-upper {
-background: transparent;
-border: none;
-border-radius: 0px;
-box-shadow: none;
+	background: transparent;
+	border: none;
+	border-radius: 0px;
+	box-shadow: none;
 }
 input[type=range]::-ms-thumb {
-box-shadow: none;
-border: 4px solid white;
-height: 1.8rem;
-width: 1.8rem;
-border-radius: 50%;
-background: black;
-cursor: pointer;
-height: 4px;
+	box-shadow: none;
+	border: 4px solid white;
+	height: 1.8rem;
+	width: 1.8rem;
+	border-radius: 50%;
+	background: black;
+	cursor: pointer;
+	height: 4px;
+	transition: all .2s ease;
+	&:hover {
+		transform: scale(1.3);
+		border-color: $red-color;
+	}
 }
 input[type=range]:focus::-ms-fill-lower {
-background: transparent;
+	background: transparent;
 }
 input[type=range]:focus::-ms-fill-upper {
-background: transparent;
+	background: transparent;
 }
 /* End Range Slider */

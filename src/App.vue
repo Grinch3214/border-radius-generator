@@ -4,16 +4,22 @@
 			<h1 class="title">Border Radius Generator</h1>
 		</header>
 		<main>
-			<BorderGenerator />
+			<BorderGenerator :ranges="ranges" />
 		</main>
 	</div>
   
 </template>
 
 <script setup>
-import BorderGenerator from './components/BorderGenerator.vue';
+import BorderGenerator from './components/BorderGenerator.vue'
+import { ref } from 'vue'
 
-	
+const ranges = ref({
+	sliderTopValue: 14,
+	sliderBottomValue: 18,
+	sliderLeftValue: 14,
+	sliderRightValue: 42
+})
 </script>
 
 <style lang="scss">
