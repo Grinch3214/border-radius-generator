@@ -1,12 +1,17 @@
 <template>
 	<section class="styles">
 		<div class="styles__input"><span>border-radius:</span>{{ stylesHandle }}</div>
-		<div class="styles__btn">COPY</div>
+		<div class="styles__btn" @click="copyResult">COPY</div>
+		<div class="styles__copy" v-if="copied" :style="{'border-radius': stylesHandle }">
+			COPIED!
+		</div>
 	</section>
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { ref, computed } from 'vue'
+
+const copied = ref(false)
 
 const props = defineProps({
 	ranges: {
@@ -34,6 +39,15 @@ const stylesHandle = computed(() => {
 		${calculateValue(props.ranges.sliderLeftValue)}%
 	`
 })
+
+async function copyResult() {
+	let copyText = `border-radius: ${stylesHandle.value.split(/\s+/).join('')};`
+	await navigator.clipboard.writeText(copyText)
+	copied.value = true
+	setTimeout(() => {
+		copied.value = false
+	}, 1000)
+}
 </script>
 
 <style lang="scss" scoped>
@@ -66,6 +80,18 @@ const stylesHandle = computed(() => {
 			&:hover {
 				background: rgb(8, 0, 134);
 			}
+		}
+
+		&__copy {
+			position: fixed;
+			top: 30%;
+			left: 50%;
+			transform: translateX(-50%);
+			background: #111;
+			padding: 3rem 4.5rem;
+			border-radius: 8px;
+			text-transform: uppercase;
+			box-shadow: 0 0 18px 1px rgb(121, 9, 111);
 		}
 	}
 </style>
