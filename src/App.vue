@@ -1,8 +1,6 @@
 <template>
 	<div class="container">
-		<header class="header">
-			<h1 class="title">Border Radius Generator</h1>
-		</header>
+		<HeaderComponent />
 		<main>
 			<BorderGenerator :ranges="ranges" />
 			<InputResult :ranges="ranges" />
@@ -13,6 +11,7 @@
 
 <script setup>
 import { ref } from 'vue'
+import HeaderComponent from './components/HeaderComponent.vue'
 import BorderGenerator from './components/BorderGenerator.vue'
 import InputResult from './components/InputResult.vue'
 
@@ -47,9 +46,6 @@ const ranges = ref({
 	font-weight: 800;
 	font-style: normal;
 	font-display: swap;
-}
-.header {
-	padding: 2.5rem 0;
 }
 </style>
 
