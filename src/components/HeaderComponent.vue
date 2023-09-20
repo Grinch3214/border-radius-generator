@@ -1,14 +1,16 @@
 <template>
 	<header class="header">
-		<h1 class="title">{{ header.title }}</h1>
+		<h1 class="title">{{ props.header.title }}</h1>
 	</header>
 </template>
 
 <script setup>
 
-	const header = {
-		title: 'Border Radius Generator'
+const props = defineProps({
+	header: {
+		type: Object,
 	}
+})
 </script>
 
 <style lang="scss">

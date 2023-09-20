@@ -1,6 +1,6 @@
 <template>
 	<div class="container">
-		<HeaderComponent />
+		<HeaderComponent :header="header" />
 		<main>
 			<BorderGenerator :ranges="ranges" />
 			<InputResult :ranges="ranges" />
@@ -14,6 +14,10 @@ import { ref } from 'vue'
 import HeaderComponent from './components/HeaderComponent.vue'
 import BorderGenerator from './components/BorderGenerator.vue'
 import InputResult from './components/InputResult.vue'
+
+const header = ref({
+	title: 'Border Radius Generator'
+})
 
 const ranges = ref({
 	sliderTopValue: 35,
