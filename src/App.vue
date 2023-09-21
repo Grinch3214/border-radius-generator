@@ -5,6 +5,7 @@
 			<BorderGenerator :ranges="ranges" />
 			<InputResult :ranges="ranges" />
 		</main>
+		<FooterComponent :footer="footer" />
 	</div>
   
 </template>
@@ -14,9 +15,19 @@ import { ref } from 'vue'
 import HeaderComponent from './components/HeaderComponent.vue'
 import BorderGenerator from './components/BorderGenerator.vue'
 import InputResult from './components/InputResult.vue'
+import FooterComponent from './components/FooterComponent.vue';
 
 const header = ref({
 	title: 'Border Radius Generator'
+})
+
+const URL = 'https://github.com/Grinch3214'
+const currentDate = new Date();
+const currentYear = currentDate.getFullYear();
+
+const footer = ref({
+	link: URL,
+	year: currentYear
 })
 
 const ranges = ref({
