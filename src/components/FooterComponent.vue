@@ -1,6 +1,6 @@
 <template>
 	<footer class="footer">
-		Made with ❤️  <a :href="props.footer.link" target="_blank">GitHub</a> (c){{ props.footer.year }}
+		Made with ❤️  <a :href="link" target="_blank">GitHub</a> (c){{ props.footer.year }}
 	</footer>
 </template>
 
@@ -10,6 +10,8 @@
 		type: Object
 	}
  })
+
+ const link = `${props.footer.link}/border-radius-generator`
 </script>
 
 <style lang="scss" scoped>
