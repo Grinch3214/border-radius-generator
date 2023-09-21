@@ -1,6 +1,6 @@
 <template>
 	<footer class="footer">
-		Made with ❤️  <a :href="link" target="_blank">GitHub</a> (c){{ props.footer.year }}
+		Made with ❤️  <a :href="link" target="_blank">GitHub</a> <span>(c)</span>{{ props.footer.year }}
 	</footer>
 </template>
 
@@ -17,13 +17,21 @@
 <style lang="scss" scoped>
 	.footer {
 		padding: 20px 0;
-		text-align: center;
 		background: #000;
 		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 8px;
 
 		a {
 			text-decoration: none;
 			color: rgb(253, 173, 24);
+		}
+
+		span {
+			font-size: 1.6rem;
+			margin: 0 -6px 0 0;
 		}
 
 		&::before, &::after {
