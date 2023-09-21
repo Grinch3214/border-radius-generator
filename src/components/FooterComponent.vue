@@ -1,6 +1,6 @@
 <template>
 	<footer class="footer">
-		Made with ❤️.  <a :href="props.footer.link" target="_blank">Github</a> (c){{ props.footer.year }}
+		Made with ❤️  <a :href="props.footer.link" target="_blank">GitHub</a> (c){{ props.footer.year }}
 	</footer>
 </template>
 

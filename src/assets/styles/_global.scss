@@ -9,7 +9,14 @@ body {
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
+	display: flex;
+	flex-flow: column;
+	min-height: 100vh;
 }
+
+	main {
+		flex: 1;
+	}
 .title {
 	font-size: 3.4rem;
 	text-transform: uppercase;
