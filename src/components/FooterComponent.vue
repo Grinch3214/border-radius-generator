@@ -27,6 +27,7 @@
 		a {
 			text-decoration: none;
 			color: rgb(253, 173, 24);
+			font-weight: 600;
 		}
 
 		span {
