@@ -51,4 +51,4 @@
 			margin-right: calc(-50vw + 600px);
 		}
 	}
-</style>>
+</style>
