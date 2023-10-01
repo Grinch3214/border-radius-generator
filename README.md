@@ -4,7 +4,7 @@ a live project with [vueJs](http://vuejs.org)
 The goal of the project is to show how to visually use border-radius.
 
 ## Demo
- <!-- Go to https://test/ -->
+ Go to https://grinch3214.github.io/border-radius-generator/
 
  ## Preview
 
