@@ -8,7 +8,7 @@ The goal of the project is to show how to visually use border-radius.
 
  ## Preview
 
-<img src="https://github.com/Grinch3214/border-radius-generator/blob/master/demo/demo.png" />
+<img src="https://github.com/Grinch3214/border-radius-generator/blob/main/demo/demo.png" />
 
 ---
 
